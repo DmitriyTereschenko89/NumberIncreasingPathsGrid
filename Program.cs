@@ -20,7 +20,7 @@
 				{
 					int newR = r + deltaR[i];
 					int newC = c + deltaC[i];
-					if (newR >= 0 && newR < rows && newC >= 0 && newC < cols && grid[newR][newC] > grid[r][c])
+					if (newR >= 0 && newR < rows && newC >= 0 && newC < cols && grid[newR][newC] < grid[r][c])
 					{
 						countPaths += DFS(dp, grid, newR, newC, rows, cols);
 						countPaths %= modulo;
