@@ -40,6 +40,7 @@
 					for (int c = 0; c < cols; ++c)
 					{
 						countPaths += DFS(dp, grid, r, c, rows, cols);
+						countPaths %= modulo;
 					}
 				}
 				return countPaths;
